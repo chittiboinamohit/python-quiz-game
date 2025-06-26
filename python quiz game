@@ -1,0 +1,107 @@
+# quiz_game.py
+
+def welcome():
+    print("\n🎉 Welcome to the Python Quiz Game!")
+    print("Answer the following questions by typing A, B, C, or D.")
+    print("You get 1 point for each correct answer.\n")
+
+questions = [
+    {
+        "question": "What is the output of: print(2 ** 3)?",
+        "options": ["A. 6", "B. 8", "C. 9", "D. 12"],
+        "answer": "B"
+    },
+    {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["A. function", "B. fun", "C. def", "D. define"],
+        "answer": "C"
+    },
+    {
+        "question": "Which of the following is a valid Python variable name?",
+        "options": ["A. 1variable", "B. variable_1", "C. variable-1", "D. @variable"],
+        "answer": "B"
+    },
+    {
+        "question": "Which operator is used for floor division in Python?",
+        "options": ["A. /", "B. //", "C. %", "D. **"],
+        "answer": "B"
+    },
+    {
+        "question": "What does the 'len()' function do in Python?",
+        "options": ["A. Deletes a variable", "B. Returns the length", "C. Prints data", "D. Converts to list"],
+        "answer": "B"
+    },
+
+
+    {
+        "question": "What will be the output of the following?\n\nx = [1, 2, 3]\ny = x\nx.append(4)\nprint(y)",
+        "options": ["A. [1, 2, 3]", "B. [1, 2, 3, 4]", "C. [4]", "D. Error"],
+        "answer": "B"
+    },
+    {
+        "question": "What will be printed?\n\ndef func(a, L=[]):\n    L.append(a)\n    return L\n\nprint(func(1))\nprint(func(2))",
+        "options": [
+            "A. [1] then [2]", 
+            "B. [1, 2] then [1, 2]", 
+            "C. [1] then [1, 2]", 
+            "D. Error"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "Which of the following expressions is NOT valid in Python?",
+        "options": [
+            "A. '5' + '5'", 
+            "B. 5 + 5", 
+            "C. 5 + '5'", 
+            "D. int('5') + 5"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "What is the output of this code?\n\nprint(bool(0), bool(3.14), bool(-3), bool(''))",
+        "options": [
+            "A. False True True False",
+            "B. True True True False",
+            "C. False False True True",
+            "D. True False False True"
+        ],
+        "answer": "A"
+    },
+    {
+        "question": "What does this return?\n\nprint(type(lambda x: x))",
+        "options": [
+            "A. <class 'function'>", 
+            "B. <class 'lambda'>", 
+            "C. <type 'function'>", 
+            "D. <function>"
+        ],
+        "answer": "A"
+    }
+]
+
+def run_quiz():
+    score = 0
+    for idx, q in enumerate(questions):
+        print(f"\nQuestion {idx + 1}: {q['question']}")
+        for opt in q["options"]:
+            print(opt)
+        answer = input("Your answer (A/B/C/D): ").upper()
+
+        if answer == q["answer"]:
+            print("✅ Correct!")
+            score += 1
+        else:
+            print(f"❌ Wrong! The correct answer was {q['answer']}.")
+
+    print(f"\n🏁 Quiz Completed! You scored {score}/{len(questions)} points.")
+    if score == len(questions):
+        print("🎉 Excellent work! You're a Python Pro!")
+    elif score >= 3:
+        print("👍 Good job! Keep learning.")
+    else:
+        print("📘 Keep practicing, you'll get there!")
+
+if __name__ == "__main__":
+    welcome()
+    run_quiz()
