@@ -1,0 +1,25 @@
+:
+
+🐍 Python Quiz Game 🎮
+This is a fun and interactive quiz game designed to test your knowledge of Python programming! Built using HTML, CSS, and JavaScript, this lightweight web app delivers a smooth and responsive quiz experience right in your browser.
+
+💡 Features
+✅ Multiple-choice questions on core Python concepts
+
+⏱️ Timer-based quiz (optional)
+
+🧠 Randomized questions for every playthrough
+
+🌈 Stylish and clean UI using HTML & CSS
+
+📊 Score tracking and instant feedback
+
+🔁 Replay button to retake the quiz anytime
+
+🚀 Technologies Used
+HTML – for structuring the quiz layout
+
+CSS – for styling and responsive design
+
+JavaScript – for game logic, question flow, and interaction
+
